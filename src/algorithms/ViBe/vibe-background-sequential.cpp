@@ -389,7 +389,7 @@ namespace bgslibrary
           while (indX < width - 1) {
             int index = indX + y * width;
 
-            if (updating_mask[index] == COLOR_BACKGROUND) {
+            if (updating_mask[index] == VIBE_COLOR_BACKGROUND) {
               /* In-place substitution. */
               uint8_t value = image_data[index];
               int index_neighbor = index + neighbor[shift];
@@ -418,7 +418,7 @@ namespace bgslibrary
         while (indX <= width - 1) {
           int index = indX + y * width;
 
-          if (updating_mask[index] == COLOR_BACKGROUND) {
+          if (updating_mask[index] == VIBE_COLOR_BACKGROUND) {
             if (position[shift] < NUMBER_OF_HISTORY_IMAGES)
               historyImage[index + position[shift] * width * height] = image_data[index];
             else {
@@ -439,7 +439,7 @@ namespace bgslibrary
         while (indX <= width - 1) {
           int index = indX + y * width;
 
-          if (updating_mask[index] == COLOR_BACKGROUND) {
+          if (updating_mask[index] == VIBE_COLOR_BACKGROUND) {
             if (position[shift] < NUMBER_OF_HISTORY_IMAGES)
               historyImage[index + position[shift] * width * height] = image_data[index];
             else {
@@ -460,7 +460,7 @@ namespace bgslibrary
         while (indY <= height - 1) {
           int index = x + indY * width;
 
-          if (updating_mask[index] == COLOR_BACKGROUND) {
+          if (updating_mask[index] == VIBE_COLOR_BACKGROUND) {
             if (position[shift] < NUMBER_OF_HISTORY_IMAGES)
               historyImage[index + position[shift] * width * height] = image_data[index];
             else {
@@ -481,7 +481,7 @@ namespace bgslibrary
         while (indY <= height - 1) {
           int index = x + indY * width;
 
-          if (updating_mask[index] == COLOR_BACKGROUND) {
+          if (updating_mask[index] == VIBE_COLOR_BACKGROUND) {
             if (position[shift] < NUMBER_OF_HISTORY_IMAGES)
               historyImage[index + position[shift] * width * height] = image_data[index];
             else {
@@ -731,7 +731,7 @@ namespace bgslibrary
           while (indX < width - 1) {
             int index = indX + y * width;
 
-            if (updating_mask[index] == COLOR_BACKGROUND) {
+            if (updating_mask[index] == VIBE_COLOR_BACKGROUND) {
               /* In-place substitution. */
               uint8_t r = image_data[3 * index];
               uint8_t g = image_data[3 * index + 1];
@@ -778,7 +778,7 @@ namespace bgslibrary
           uint8_t g = image_data[3 * index + 1];
           uint8_t b = image_data[3 * index + 2];
 
-          if (updating_mask[index] == COLOR_BACKGROUND) {
+          if (updating_mask[index] == VIBE_COLOR_BACKGROUND) {
             if (position[shift] < NUMBER_OF_HISTORY_IMAGES) {
               historyImage[3 * index + position[shift] * (3 * width) * height] = r;
               historyImage[3 * index + position[shift] * (3 * width) * height + 1] = g;
@@ -809,7 +809,7 @@ namespace bgslibrary
           uint8_t g = image_data[3 * index + 1];
           uint8_t b = image_data[3 * index + 2];
 
-          if (updating_mask[index] == COLOR_BACKGROUND) {
+          if (updating_mask[index] == VIBE_COLOR_BACKGROUND) {
             if (position[shift] < NUMBER_OF_HISTORY_IMAGES) {
               historyImage[3 * index + position[shift] * (3 * width) * height] = r;
               historyImage[3 * index + position[shift] * (3 * width) * height + 1] = g;
@@ -840,7 +840,7 @@ namespace bgslibrary
           uint8_t g = image_data[3 * index + 1];
           uint8_t b = image_data[3 * index + 2];
 
-          if (updating_mask[index] == COLOR_BACKGROUND) {
+          if (updating_mask[index] == VIBE_COLOR_BACKGROUND) {
             if (position[shift] < NUMBER_OF_HISTORY_IMAGES) {
               historyImage[3 * index + position[shift] * (3 * width) * height] = r;
               historyImage[3 * index + position[shift] * (3 * width) * height + 1] = g;
@@ -870,7 +870,7 @@ namespace bgslibrary
           uint8_t g = image_data[3 * index + 1];
           uint8_t b = image_data[3 * index + 2];
 
-          if (updating_mask[index] == COLOR_BACKGROUND) {
+          if (updating_mask[index] == VIBE_COLOR_BACKGROUND) {
             if (position[shift] < NUMBER_OF_HISTORY_IMAGES) {
               historyImage[3 * index + position[shift] * (3 * width) * height] = r;
               historyImage[3 * index + position[shift] * (3 * width) * height + 1] = g;

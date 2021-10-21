@@ -11,7 +11,7 @@ namespace bgslibrary
   {
     namespace twopoints
     {
-      const int COLOR_BACKGROUND = 0; /*!< Default label for background pixels */
+      //const int COLOR_BACKGROUND = 0; /*!< Default label for background pixels */
       const int COLOR_FOREGROUND = 255; /*!< Default label for foreground pixels. Note that some authors chose any value different from 0 instead */
 
       typedef struct twopointsModel twopointsModel_t;

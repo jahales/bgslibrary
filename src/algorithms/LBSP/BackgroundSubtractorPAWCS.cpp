@@ -771,7 +771,7 @@ namespace bgslibrary
               fCurrMeanRawSegmRes_ST = fCurrMeanRawSegmRes_ST*(1.0f - fRollAvgFactor_ST) + fRollAvgFactor_ST;
               if (bCurrRegionIsFlat || (rand() % nCurrLocalWordUpdateRate) == 0) {
                 size_t nGlobalWordLUTIdx;
-                GlobalWord_1ch* pCurrGlobalWord;
+                GlobalWord_1ch* pCurrGlobalWord = nullptr;
                 for (nGlobalWordLUTIdx = 0; nGlobalWordLUTIdx < m_nCurrGlobalWords; ++nGlobalWordLUTIdx) {
                   pCurrGlobalWord = (GlobalWord_1ch*)m_aPxInfoLUT_PAWCS[nPxIter].apGlobalDictSortLUT[nGlobalWordLUTIdx];
                   if (L1dist(pCurrGlobalWord->oFeature.anColor[0], nCurrColor) <= nCurrColorDistThreshold
@@ -1009,7 +1009,7 @@ namespace bgslibrary
               fCurrMeanRawSegmRes_ST = fCurrMeanRawSegmRes_ST*(1.0f - fRollAvgFactor_ST) + fRollAvgFactor_ST;
               if (bCurrRegionIsFlat || (rand() % nCurrLocalWordUpdateRate) == 0) {
                 size_t nGlobalWordLUTIdx;
-                GlobalWord_3ch* pCurrGlobalWord;
+                GlobalWord_3ch* pCurrGlobalWord = nullptr;
                 for (nGlobalWordLUTIdx = 0; nGlobalWordLUTIdx < m_nCurrGlobalWords; ++nGlobalWordLUTIdx) {
                   pCurrGlobalWord = (GlobalWord_3ch*)m_aPxInfoLUT_PAWCS[nPxIter].apGlobalDictSortLUT[nGlobalWordLUTIdx];
                   if (L1dist(nCurrIntraDescBITS, pCurrGlobalWord->nDescBITS) <= nCurrTotDescDistThreshold / GWORD_DESC_THRES_BITS_MATCH_FACTOR
