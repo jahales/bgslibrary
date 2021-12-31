@@ -123,20 +123,21 @@ void CodeBook::fg_cb(const cv::Mat& frame, cv::Mat& fg)
       {
         if (cm[k].min <= pix && pix <= cm[k].max && !found)
         {
-          cm[k].min = ((1 - beta)*(pix - alpha)) + (beta*cm[k].min);
+          /*cm[k].min = ((1 - beta)*(pix - alpha)) + (beta*cm[k].min);
           cm[k].max = ((1 - beta)*(pix + alpha)) + (beta*cm[k].max);
           cm[k].l = 0;
           cm[k].first = t;
-          cm[k].f++;
+          cm[k].f++;*/
           found = true;
+          break;
         }
-        else
-          cm[k].l++;
+       // else
+          //cm[k].l++;
       }
-      cm.erase(remove_if(cm.begin(), cm.end(), [](codeword& c) { return c.l >= Tdel; }), cm.end());
+      //cm.erase(remove_if(cm.begin(), cm.end(), [](codeword& c) { return c.l >= Tdel; }), cm.end());
       fg.at<uchar>(i, j) = found ? 0 : 255;
-      if (found) continue;
-      found = false;
+      //if (found || true) continue;
+      /*found = false;
       std::vector<codeword>& cc = cbCache[i][j];
       for (int k = 0; k < (int)cc.size(); k++)
       {
@@ -171,7 +172,7 @@ void CodeBook::fg_cb(const cv::Mat& frame, cv::Mat& fg)
         if (it->f > Tadd)
           cm.push_back(*it);
 
-      cc.erase(remove_if(cc.begin(), cc.end(), [](codeword& c) { return c.f > Tadd; }), cc.end());
+      cc.erase(remove_if(cc.begin(), cc.end(), [](codeword& c) { return c.f > Tadd; }), cc.end());*/
     }
   }
 }

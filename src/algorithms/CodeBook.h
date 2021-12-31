@@ -30,6 +30,7 @@ namespace bgslibrary
 
       void process(const cv::Mat &img_input, cv::Mat &img_output, cv::Mat &img_bgmodel);
 
+      int learningFrames = 10;
     private:
       static const int Tdel = 200;
       static const int Tadd = 150;
@@ -38,7 +39,6 @@ namespace bgslibrary
       const float DEFAULT_BETA = 1.;
       const int DEFAULT_LEARNFRAMES = 10;
       int t = 0;
-      int learningFrames = 10;
       int alpha = 10;
       float beta = 1;
       std::vector<codeword> **cbMain;
